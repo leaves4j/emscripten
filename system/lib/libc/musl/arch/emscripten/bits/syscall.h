@@ -573,7 +573,7 @@
 #define SYS_getdents64		220
 #define SYS_fcntl64		221
 /* 223 is unused */
-#define SYS_gettid		224
+/*#define SYS_gettid		224*/
 #define SYS_readahead		225
 #define SYS_setxattr		226
 #define SYS_lsetxattr		227
@@ -589,7 +589,7 @@
 #define SYS_fremovexattr	237
 #define SYS_tkill		238
 #define SYS_sendfile64		239
-#define SYS_futex		240
+/*#define SYS_futex		240*/
 #define SYS_sched_setaffinity	241
 #define SYS_sched_getaffinity	242
 #define SYS_set_thread_area	243
