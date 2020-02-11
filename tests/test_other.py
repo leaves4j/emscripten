@@ -8230,10 +8230,10 @@ int main() {
     self.run_metadce_test('hello_libcxx.cpp', *args)
 
   @parameterized({
-    'normal': (['-O2'], 40, ['abort'], ['waka'], 186423, 23, 36, 540), # noqa
+    'normal': (['-O2'], 40, ['abort'], ['waka'], 186423, 23, 36, 550), # noqa
     'emulated_function_pointers':
               (['-O2', '-s', 'EMULATED_FUNCTION_POINTERS=1'],
-                        40, ['abort'], ['waka'], 188310, 23, 37, 520), # noqa
+                        40, ['abort'], ['waka'], 188310, 23, 37, 530), # noqa
   })
   @no_wasm_backend()
   def test_metadce_cxx_fastcomp(self, *args):
