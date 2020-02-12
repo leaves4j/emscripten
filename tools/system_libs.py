@@ -826,7 +826,7 @@ class libcxxabi(CXXLibrary, NoExceptLibrary, MTLibrary):
       '-std=c++11',
       '-Oz',
       '-D_LIBCPP_DISABLE_VISIBILITY_ANNOTATIONS',
-      # Remov this once we update to include this llvm
+      # Remove this once we update to include this llvm
       # revision: https://reviews.llvm.org/D64961
       '-D_LIBCXXABI_GUARD_ABI_ARM',
     ]
