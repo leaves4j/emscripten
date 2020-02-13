@@ -3319,6 +3319,11 @@ def do_binaryen(target, asm_target, options, memfile, wasm_binary_target,
     with open(final, 'w') as f:
       f.write(js)
 
+  # split the DWARF in the final file into a side file
+  if shared.Settings.FULL_DWARF:
+    dwo_file = wasm_binary_target + '.dwo'
+    run_process(shared.LLVM_OBJCOPY, wasm_binary_target, '--split-dwo=' + dwo_file)
+
   # if targeting only JS, delete the redundant temporary
   # .wasm output file
   if shared.Settings.WASM == 1 and shared.Settings.WASM2JS:
