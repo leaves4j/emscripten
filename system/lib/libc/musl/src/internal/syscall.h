@@ -47,7 +47,7 @@ long __syscall_ret(unsigned long), __syscall(syscall_arg_t, ...),
 #endif
 #define __syscall7(n,a,b,c,d,e,f,g) (__syscall)(n,__scc(a),__scc(b),__scc(c),__scc(d),__scc(e),__scc(f),__scc(g))
 #else // __EMSCRIPTEN__
-#define __syscall_emscripten(n, ...) __syscall##n(n, ##__VA_ARGS__)
+#define __syscall_emscripten(n, ...) __syscall##n(__VA_ARGS__)
 #define __syscall_emscripten0(n) __syscall_emscripten(n)
 #define __syscall_emscripten1(n,a) __syscall_emscripten(n,__scc(a))
 #define __syscall_emscripten2(n,a,b) __syscall_emscripten(n,__scc(a),__scc(b))
