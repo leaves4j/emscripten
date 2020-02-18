@@ -120,7 +120,7 @@ f = open(filename, 'r')
 data = f.read()
 f.close()
 
-summaries = re.search('\^0 = module:', data)
+summaries = re.search(r'\^0 = module:', data)
 if summaries:
   summaries_start = summaries.start()
   # Strip ThinLTO summaries since we don't want to have to generate

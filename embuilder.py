@@ -117,8 +117,8 @@ def build_port(port_name, lib_name, params, extra_source=''):
 def main():
   global force
   parser = argparse.ArgumentParser(description=__doc__,
-      formatter_class=argparse.RawDescriptionHelpFormatter,
-      epilog=get_help())
+                                   formatter_class=argparse.RawDescriptionHelpFormatter,
+                                   epilog=get_help())
   parser.add_argument('--lto', action='store_true', help='build bitcode object for LTO')
   parser.add_argument('--pic', action='store_true',
                       help='build relocatable objects for suitable for dynamic linking')
