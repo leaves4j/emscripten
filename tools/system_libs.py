@@ -1583,7 +1583,7 @@ class Ports(object):
       commands.append([shared.PYTHON, shared.EMCC, '-c', src, '-O2', '-o', obj, '-w'] + include_commands + flags)
       objects.append(obj)
 
-    self.run_commands(commands)
+    Ports.run_commands(commands)
     create_lib(output_path, objects)
     return output_path
 
